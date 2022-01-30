@@ -1,6 +1,6 @@
 ### Olá! Eu sou Joadson Silva 👋
 
-- 🔭 Sem trabalho na área de Dev 
+- 🔭 A procura de trabalho de Dev 
 - 🌱 Estudando React no momento
 - 📫 Contate-me no e-mail: joadson83@gmail.com
 - 😄 Pronouns: eu/nós
