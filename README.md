@@ -1,9 +1,11 @@
 ### Olá! Eu sou Joadson Silva 👋
 
 - 🔭 A procura de trabalho de Dev 
-- 🌱 Estudando React no momento
+- 🌱 Começando em Docker
+- 📚 Estudando React no momento
+- 🚀 Stack: Nodejs e ReactJs
 - 📫 Contate-me no e-mail: joadson83@gmail.com
-- 😄 Pronouns: eu/nós
+- 🎯 Focado em sempre evoluir em conhecimento
 
 <div align="center">
   <a href="https://github.com/Joads0n">
