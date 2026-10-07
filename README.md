@@ -1,27 +1,39 @@
 # Joadson Silva
 
-**Cloud Infrastructure Engineering | GCP & AWS**
+**Engenharia de Infraestrutura Cloud | GCP & AWS**
 
-My technical focus is Google Cloud Platform and AWS, with an emphasis on cloud architecture, networking, security, governance, reliability, FinOps, and Infrastructure as Code.
+Meu foco técnico é infraestrutura em Google Cloud Platform e AWS, com ênfase em arquitetura de nuvem, redes, segurança, governança, confiabilidade, FinOps e Infraestrutura como Código (IaC).
 
-I am building a portfolio of fictional infrastructure case studies that connect business requirements to architecture decisions, implementation, and validation evidence.
+Estou construindo um portfólio de estudos de caso de infraestrutura que conectam requisitos de negócio a decisões de arquitetura, implementação e evidências de validação. Os cenários e as empresas são fictícios, sem dados ou artefatos de empregadores e clientes.
 
-[Explore my Cloud Infrastructure Portfolio](https://github.com/Joads0n/cloud-infrastructure-portfolio).
+[Explore meu portfólio de infraestrutura cloud](https://github.com/Joads0n/cloud-infrastructure-portfolio).
 
-## Portfolio status
+## Case em destaque: Landing Zone no GCP
 
-The portfolio is in its foundation phase: defining documentation standards, repository practices, and a consistent structure for technical evidence.
+Uma base de infraestrutura no nível de um projeto, provisionada com Terraform para hospedar uma aplicação simples em VMs. O cenário inclui:
 
-The first planned case is **GCP Enterprise Landing Zone / Cloud Foundation**, covering resource organization, networking, IAM, logging, governance, and cost allocation. Architecture and implementation work have not started.
+- Criação do projeto, vínculo com faturamento, labels e ativação de APIs.
+- VPC, sub-rede, regras de firewall, Cloud NAT e endereços IP reservados.
+- Load Balancer de aplicação externo global, duas réplicas Nginx em VMs sem IP público e em zonas distintas, com expansão manual para três réplicas.
+- Conta de serviço da aplicação, OS Login, Ops Agent e política de snapshots.
+- Parâmetros organizados por responsabilidade, documentação de implantação e limpeza, testes Terraform com provedores simulados e testes Python.
 
-## Engineering approach
+A implementação e os testes locais estão disponíveis. O registro de evidências separa os resultados locais das sessões anteriores no GCP; a revisão atual, simplificada para usar estado local, ainda requer uma nova validação ponta a ponta na nuvem.
 
-- Explain requirements, constraints, alternatives, and trade-offs.
-- Apply security, reliability, governance, and cost controls appropriate to the scenario.
-- Use Terraform where it supports reproducibility and a clear infrastructure requirement.
-- Publish validation evidence and distinguish proposed designs from tested outcomes.
-- Use fictional scenarios and data throughout the portfolio.
+[Conheça o case](https://github.com/Joads0n/cloud-infrastructure-portfolio/tree/5829802063f2611e2e271418a881ef394a3cc033/gcp-enterprise-landing-zone) · [Testes e resultados esperados](https://github.com/Joads0n/cloud-infrastructure-portfolio/blob/5829802063f2611e2e271418a881ef394a3cc033/gcp-enterprise-landing-zone/tests/README.md) · [Evidências e limites da validação](https://github.com/Joads0n/cloud-infrastructure-portfolio/blob/5829802063f2611e2e271418a881ef394a3cc033/gcp-enterprise-landing-zone/docs/single-project-validation.md)
 
-## Contact
+## Próximas frentes
 
-[LinkedIn](https://www.linkedin.com/in/joadson-costa-6bb5641a4) · [Email](mailto:joadson83@gmail.com)
+O catálogo também prevê cases de fundação organizacional no GCP, engenharia de IaC, redes, segurança, governança, FinOps, conectividade híbrida, recuperação de desastres e migração de cargas de trabalho. Essas frentes permanecem planejadas, com escopos separados da Landing Zone.
+
+## Como abordo engenharia
+
+- Explicitar requisitos, restrições, alternativas e os impactos de cada decisão.
+- Aplicar controles de segurança, confiabilidade, governança e custos adequados ao cenário.
+- Usar Terraform para tornar o provisionamento reproduzível e os parâmetros compreensíveis.
+- Documentar testes, resultados esperados, limitações e procedimentos de limpeza.
+- Distinguir propostas, verificações locais e resultados observados na nuvem.
+
+## Contato
+
+[LinkedIn](https://www.linkedin.com/in/joadson-costa-6bb5641a4) · [E-mail](mailto:joadson83@gmail.com)
