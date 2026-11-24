@@ -22,9 +22,23 @@ A implementação e os testes locais estão disponíveis. O registro de evidênc
 
 [Conheça o case](https://github.com/Joads0n/cloud-infrastructure-portfolio/tree/5829802063f2611e2e271418a881ef394a3cc033/gcp-enterprise-landing-zone) · [Testes e resultados esperados](https://github.com/Joads0n/cloud-infrastructure-portfolio/blob/5829802063f2611e2e271418a881ef394a3cc033/gcp-enterprise-landing-zone/tests/README.md) · [Evidências e limites da validação](https://github.com/Joads0n/cloud-infrastructure-portfolio/blob/5829802063f2611e2e271418a881ef394a3cc033/gcp-enterprise-landing-zone/docs/single-project-validation.md)
 
+## Case de destaque: Migração de VMs AWS para o GCP
+
+Um exercício de migração entre clouds para uma empresa fictícia com duas VMs existentes na AWS, expostas por Load Balancer e com NAT de saída. O escopo Terraform cobre somente o destino GCP e o plano de transição:
+
+- Projeto de destino, APIs, VPC privada, subnet, Cloud Router, Cloud NAT e firewalls restritos.
+- Application Global Load Balancer à frente de um grupo não gerenciado que recebe as duas VMs criadas pelo M2VM.
+- Contrato não sensível para a origem AWS, sem provider AWS e sem provisionar VMs de destino.
+- DNS de cutover e rollback entre a origem AWS fictícia e o frontend GCP.
+- Testes estáticos e testes live read-only para validar projeto, APIs, rede, NAT, controles, LB, DNS e quantidade de backends.
+
+O ambiente GCP foi provisionado e validado em uma sessão temporária e depois descomissionado. A validação live pré-migração confirmou a arquitetura preparada, com o backend vazio aguardando as VMs migradas.
+
+[Conheça o case](https://github.com/Joads0n/cloud-infrastructure-portfolio/tree/feat/workload-migration-case/workload-migration-case) · [Testes do case](https://github.com/Joads0n/cloud-infrastructure-portfolio/tree/feat/workload-migration-case/workload-migration-case/tests)
+
 ## Próximas frentes
 
-O catálogo também prevê cases de fundação organizacional no GCP, engenharia de IaC, redes, segurança, governança, FinOps, conectividade híbrida, recuperação de desastres e migração de cargas de trabalho. Essas frentes permanecem planejadas, com escopos separados da Landing Zone.
+O catálogo também prevê cases de fundação organizacional no GCP, engenharia de IaC, redes, segurança, governança, FinOps, conectividade híbrida e recuperação de desastres. Essas frentes permanecem planejadas, com escopos separados dos cases já implementados.
 
 ## Como abordo engenharia
 
